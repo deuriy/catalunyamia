@@ -1,0 +1,104 @@
+extends ../layout/base
+
+append config
+	- var title = 'Новости';
+
+block content
+	main.main-content.main-content--news
+		section.news
+			include ../components/section-search-news
+			section.columns.news__columns
+				.container
+					.row
+						.col-12.col-lg-9
+							.sort-offers.sort-offers--news.news__sort-offers
+								.sort-offers__inner
+									.sort-offers__left
+										h2.section-title.sort-offers__title Все материалы
+									.sort-offers__right
+										form.sorting-form.sorting-form--news.sort-offers__sorting-form
+											.sorting-form__item
+												label(for="number_of_pages").sorting-form__label Кол-во страниц
+												select(name="number_of_pages", id="number_of_pages").sorting-form__select
+													option(value="7") На странице по 7
+													option(value="10") На странице по 10
+													option(value="15") На странице по 15
+													option(value="20") На странице по 20
+											.sorting-form__item
+												label(for="sorting_criterion").sorting-form__label Сортировать
+												select(name="sorting_criterion", id="sorting_criterion").sorting-form__select
+													option(value="default") По умолчанию
+													option(value="criterion1") Критерий 1
+													option(value="criterion2") Критерий 2
+													option(value="criterion3") Критерий 3
+							.news-blocks.news__news-blocks
+								include ../components/news-block-large
+								include ../components/news-block-large
+								include ../components/news-block-large
+								include ../components/news-block-large
+								include ../components/news-block-large
+							ul.pagination
+								li.pagination__item.pagination__item--prev
+									a(href="#").pagination__link Назад
+								li.pagination__item
+									a(href="#").pagination__link 1
+								li.pagination__item.pagination__item--current
+									a(href="#").pagination__link 2
+								li.pagination__item
+									a(href="#").pagination__link 3
+								li.pagination__item
+									a(href="#").pagination__link 4
+								li.pagination__item
+									a(href="#").pagination__link 5
+								li.pagination__item
+									a(href="#").pagination__link 6
+								li.pagination__item.pagination__item--more
+									a(href="#").pagination__link
+								li.pagination__item
+									a(href="#").pagination__link 16
+								li.pagination__item.pagination__item--next
+									a(href="#").pagination__link Вперед
+						.col-12.col-lg-3
+							.sidebar.sidebar--news.news__sidebar
+								.categories-block.sidebar__categories-block
+									h3.categories-block__title Категории
+									ul.categories-block__list
+										li.categories-block__item
+											a(href="#").categories-block__link Все материалы
+										li.categories-block__item
+											a(href="#").categories-block__link Только новости
+										li.categories-block__item
+											a(href="#").categories-block__link Только статьи
+										li.categories-block__item
+											a(href="#").categories-block__link Рынки и цены
+										li.categories-block__item
+											a(href="#").categories-block__link События, люди, рейтинги
+										li.categories-block__item
+											a(href="#").categories-block__link Законы и правила
+										li.categories-block__item
+											a(href="#").categories-block__link Инвестиции и финансы
+								.simple-search.sidebar__search
+									h3.simple-search__title Поиск
+									form(action="#").simple-search__form
+										input(type="text", name="query", placeholder="Ключевые слова").simple-search__form-text
+										button(type="submit").simple-search__form-submit
+								.news-teasers.sidebar__news-teasers
+									h3.news-teasers__title Новости
+									include ../components/news-block-teaser
+									include ../components/news-block-teaser
+									include ../components/news-block-teaser
+									include ../components/news-block-teaser
+								.about-us.about-us--sidebar.sidebar__about-us
+									h2.about-us__title Выбирайте жилье своей мечты уже сегодня! с Picolo Europa SL!
+									.about-us__text
+										p.
+											#[strong Picolo Europa SL] – это агентство недвижимости в Испании, открытое в 2002 году. Наша специализация - недорогая недвижимость в Испании и Каталонии. #[br]Мы специализируемся на подборе, продаже и последующем послепродажном обслуживании объектов недвижимости в Испании. Наши надежные партнеры: #[br]адвокатское бюро, строительная компания, профессиональные переводчики и риэлторы сделают покупку дома или квартиры в Испании легкой.
+										p.
+											На нашем сайте - только новые и актуальные предложения вилл и апартаментов на Коста Брава и другие объекты недвижимости в Барселоне.
+										strong Наши сотрудники всегда готовы:
+										ul.ulist.ulist--sidebar
+											li.ulist__item оказать консультацию онлайн,
+											li.ulist__item прислать выгодные варианты по запросу подбора,
+											li.ulist__item уведомлять вас о желаемых вариантах в еженедельной рассылке предложений.
+											li.ulist__item разработать и провести индивидуальную ознакомительную поездку по побережью Испании
+											li.ulist__item оказать полный комплекс услуг по юридическому сопровождению сделки

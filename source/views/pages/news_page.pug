@@ -1,0 +1,77 @@
+extends ../layout/base
+
+append config
+	- var title = 'Новости';
+
+block content
+	main.main-content.main-content--news
+		section.news.news--page
+			include ../components/section-search-news-page
+			section.columns.news__columns
+				.container
+					.row
+						.col-12.col-lg-9
+							h2.section-title.section-title--news-page.news__title Цены на недвижимость в Барселоне восстановились #[br]на 24% с момента кризиса
+							.news-article
+								.news-article__img(style="background-image:url('assets/images/content/news.jpg')")
+								.news-article__date Декабрь 25, 2017
+								.news-article__text
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit doloremque necessitatibus dolorum maiores, tempore, maxime pariatur reiciendis animi odit enim recusandae dolorem suscipit iure iste hic quidem dignissimos expedita, nesciunt, illum voluptatibus saepe tenetur! Ut!
+								.news-article__links
+									a(href="#").news-article__link Предыдущая новость
+									a(href="#").news-article__link Следующая новость
+						.col-12.col-lg-3
+							.sidebar.sidebar--news.news__sidebar
+								.categories-block.sidebar__categories-block
+									h3.categories-block__title Категории
+									ul.categories-block__list
+										li.categories-block__item
+											a(href="#").categories-block__link Все материалы
+										li.categories-block__item
+											a(href="#").categories-block__link Только новости
+										li.categories-block__item
+											a(href="#").categories-block__link Только статьи
+										li.categories-block__item
+											a(href="#").categories-block__link Рынки и цены
+										li.categories-block__item
+											a(href="#").categories-block__link События, люди, рейтинги
+										li.categories-block__item
+											a(href="#").categories-block__link Законы и правила
+										li.categories-block__item
+											a(href="#").categories-block__link Инвестиции и финансы
+								.simple-search.sidebar__search
+									h3.simple-search__title Поиск
+									form(action="#").simple-search__form
+										input(type="text", name="query", placeholder="Ключевые слова").simple-search__form-text
+										button(type="submit").simple-search__form-submit
+								.news-teasers.sidebar__news-teasers
+									h3.news-teasers__title Новости
+									include ../components/news-block-teaser
+									include ../components/news-block-teaser
+									include ../components/news-block-teaser
+									include ../components/news-block-teaser
+								.about-us.about-us--sidebar.sidebar__about-us
+									h2.about-us__title Выбирайте жилье своей мечты уже сегодня! с Picolo Europa SL!
+									.about-us__text
+										p.
+											#[strong Picolo Europa SL] – это агентство недвижимости в Испании, открытое в 2002 году. Наша специализация - недорогая недвижимость в Испании и Каталонии. #[br]Мы специализируемся на подборе, продаже и последующем послепродажном обслуживании объектов недвижимости в Испании. Наши надежные партнеры: #[br]адвокатское бюро, строительная компания, профессиональные переводчики и риэлторы сделают покупку дома или квартиры в Испании легкой.
+										p.
+											На нашем сайте - только новые и актуальные предложения вилл и апартаментов на Коста Брава и другие объекты недвижимости в Барселоне.
+										strong Наши сотрудники всегда готовы:
+										ul.ulist.ulist--sidebar
+											li.ulist__item оказать консультацию онлайн,
+											li.ulist__item прислать выгодные варианты по запросу подбора,
+											li.ulist__item уведомлять вас о желаемых вариантах в еженедельной рассылке предложений.
+											li.ulist__item разработать и провести индивидуальную ознакомительную поездку по побережью Испании
+											li.ulist__item оказать полный комплекс услуг по юридическому сопровождению сделки

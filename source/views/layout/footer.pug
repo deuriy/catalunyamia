@@ -1,0 +1,54 @@
+include ../components/popup-form
+footer.footer
+	.container.footer__container
+		.footer__logo-and-menus
+			a(href="/", title="На главную").footer__logo
+				img(src="assets/images/content/footer_logo.png", alt="Логотип")
+			.footer__menus
+				.secondary-menu.footer__first-menu
+					ul.secondary-menu__menu
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Таунхаусы
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Квартиры
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Дома
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Земельные участки
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Бизнес и коммерческая недвижимость
+				.secondary-menu.secondary-menu--second.footer__second-menu
+					ul.secondary-menu__menu
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Услуги
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Каталог недвижимости
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link Строительство и ремонт
+						li.secondary-menu__item.d-none.d-sm-block
+							a(href="#").secondary-menu__link Земельные участки
+						li.secondary-menu__item
+							a(href="#").secondary-menu__link От банков
+		.contacts-block.footer__contacts
+			h4.contacts-block__title Контакты
+			ul.contacts-block__list
+				li.contacts-block__item
+					a(href="tel:+74951087479").contacts-block__link
+						include ../svgico/contacts-block/phone
+						.
+							+7 495 108 74 79
+				li.contacts-block__item
+					a(href="tel:+34667697007").contacts-block__link
+						include ../svgico/contacts-block/phone
+						.
+							+34 667 697 007
+				li.contacts-block__item
+					a(href="mailto:PicoloEuropaSL@gmail.com").contacts-block__link
+						include ../svgico/contacts-block/email
+						.
+							PicoloEuropaSL@gmail.com
+			a(href="#ask-question").btn-orange.contacts-block__btn.open-popup-link Обратный звонок
+section.copyright
+	.container
+		.row
+			.col-12!= 'Picolo Europa SL © 2002—2018'

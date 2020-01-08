@@ -1,0 +1,536 @@
+extends ../layout/base
+
+append config
+	- var title = 'Карточка товара';
+
+block content
+	main.main-content.main-content--frontpage
+		section.product
+			include ../components/section-search-product
+			section.product-card.product__card
+				.container
+					.row
+						.product-card__left.col-12.col-lg-6.col-xl-7
+							h1.product-card__title Апартаменты 250 м#[sup 2] в элитном районе Барселоны
+							.product-images
+								.swiper-container.product-images__gallery
+									.swiper-wrapper
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+										.swiper-slide.product-images__gallery-slide(data-src="assets/images/content/apartments_photo.png", data-fancybox="gallery")
+											.product-images__label Цена снижена на 5 000 евро
+											.product-images__gallery-img(style="background-image: url('assets/images/content/apartments_photo.png')")
+								.swiper-container.product-images__thumbs
+									.swiper-wrapper
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+										.swiper-slide.product-images__thumbs-slide
+											img(src="assets/images/content/apartments_photo_thumbnail.png", alt="Фото апартаментов (превью)")
+									.swiper-button-next.product-images__next
+									.swiper-button-prev.product-images__prev
+						.product-card__right.col-12.col-lg-6.col-xl-5
+							.product-card__number-and-icons
+								.product-card__number №1166
+								a(href="#", title="Написать на почту").email.product-card__email
+									include ../svgico/action-links/email
+								a(href="#", title="В избранное").favorites
+									include ../svgico/offer-block/like
+									.
+										В избранное
+							.product-characteristics.product-card__characteristics
+								.product-characteristics__group
+									.product-characteristics__item
+										.product-characteristics__name Регион
+										.product-characteristics__value #[a(href="#").underline-link Каталония]
+									.product-characteristics__item
+										.product-characteristics__name Провинция
+										.product-characteristics__value #[a(href="#").underline-link Жирона]
+									.product-characteristics__item
+										.product-characteristics__name Побережье
+										.product-characteristics__value #[a(href="#").underline-link Коста Брава]
+									.product-characteristics__item
+										.product-characteristics__name Город
+										.product-characteristics__value #[a(href="#").underline-link Бланес]
+									.product-characteristics__item
+										.product-characteristics__name Район
+										.product-characteristics__value #[a(href="#").underline-link Фенальс - Санта Клотильда]
+								.product-characteristics__group.product-characteristics__group--second
+									.product-characteristics__item
+										.product-characteristics__name Тип недвиж.
+										.product-characteristics__value Земельный участок
+									.product-characteristics__item
+										.product-characteristics__name Сделка
+										.product-characteristics__value Продажа или аренда
+								.product-characteristics__group
+									.product-characteristics__item.product-characteristics__item--square
+										.product-characteristics__name
+											include ../svgico/offer-block/plans
+											.
+												Площадь
+										.product-characteristics__value 350 м#[sup 2]
+									.product-characteristics__item.product-characteristics__item--rooms
+										.product-characteristics__name
+											include ../svgico/offer-block/door
+											.
+												Комнат
+										.product-characteristics__value 4
+									.product-characteristics__item.product-characteristics__item--bathrooms
+										.product-characteristics__name
+											include ../svgico/offer-block/bathroom
+											.
+												Сан. узлов
+										.product-characteristics__value 4
+									.product-characteristics__item.product-characteristics__item--bedrooms
+										.product-characteristics__name
+											include ../svgico/offer-block/bed
+											.
+												Спален
+										.product-characteristics__value 4
+							.product-card__deal-blocks
+								.deal-block.product-card__deal-block
+									.deal-block__title
+										.deal-block__title-wrapper Продажа
+									.deal-block__price 100.000 #[img(src="assets/images/icons/euro.png").deal-block__price-icon]
+								.deal-block.product-card__deal-block
+									.deal-block__title
+										.deal-block__title-wrapper Аренда
+									.deal-block__price 900 #[img(src="assets/images/icons/euro.png").deal-block__price-icon]
+									ul.inline-links.inline-links--deal-block.deal-block__terms
+										li.inline-links__item.inline-links__item--active
+											a(href="#").inline-links__link.underline-link Сутки
+										li.inline-links__item
+											a(href="#").inline-links__link.underline-link Неделя
+										li.inline-links__item
+											a(href="#").inline-links__link.underline-link Месяц
+							.product-card__btn-wrapper
+								a.btn-orange(href="#").product-card__btn Оставить заявку
+			section.product__columns
+				.container
+					.row
+						.col-12.col-lg-9
+							section.tabs.tabs--product.product__tabs
+								.tabs__list.tabs-list.tabs-list--product
+									.tabs__item.tabs-list__item.active
+										span.tabs-list__title Описание
+									.tabs__item.tabs-list__item
+										span.tabs-list__title Характеристики
+									.tabs__item.tabs-list__item
+										span.tabs-list__title Карта
+									.tabs__item.tabs-list__item
+										span.tabs-list__title Вид с улицы
+									.tabs__item.tabs-list__item
+										span.tabs-list__title Как проехать
+								.tabs__container
+									.tabs__content(style="display: block;")
+										.tabs__top
+											.product-description
+												p.
+													Этот просторный и светлый лофт находится на улице Valencia, рядом с площадью Les Glòries.
+												p.
+													Это светлые и уютные апартаменты с паркетным полом из сосны, с освещением LED и бетонными стенами в нескольких частях, которые придают им индустриальный стиль.
+												p.
+													При входе расположена большая гостиная с окнами, выходящими на улицу Valencia, благодаря которым квартира отлично освещена. В апартаментах есть открытая кухня с серым керамическим полом, выполненная в современном дизайне и отделанная материалами высшего качества. Пройдя дальше, мы окажемся в открытой спальной зоне с возможностью создать закрытые пространства путем использования раздвижных дверей от пола до потолка. Первая спальня двухместная, с окнами, выходящими в тихий внутренний двор. Напротив спальни расположен дизайнерский умывальник, отделенный от ванной комнаты с душем. Вторая спальня находится рядом с первой. Это большая комната suite с двумя шкафами, один из которых встроенный и углубляющийся внутрь с особым дизайном, разработанным для удобного расположения одежды и аксессуаров. Эта спальня отлично освещена, так как ее окна также выходят во внутренний двор. Спальня располагает личной ванной комнатой.
+												p.
+													При ремонте апартаментов использовались отделочные материалы высокого качества. Бытовая техника, установленная в квартире, также отличается отличным качеством (siemens, Bosch, Dizzy), также как и мебель на кухне и в ванной.
+												p.
+													В комнате и дневной зоне установлена система кондиционирования воздуха, а также радиаторное отопление.
+												p.
+													Этот прекрасный лофт имеет прекрасное центральное расположение всего в 5 минутах от станции метро Encants и торгового центра Les Glòries и в 10 минутах от знаменитого собора la Sagrada Familia. Рядом находятся станции линий метро L1-L2, множество автобусов, а также сервис велопроката Bicing.
+											.tabs__more
+												a(href="#").underline-link.tabs__more-link Хочу получить больше информации об этом объекте
+										.tabs__bottom
+											ul.tags.tabs__tags
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+									.tabs__content
+										.tabs__top
+											.characteristics.characteristics--paired.tabs__paired-characteristics
+												h3.section-title.characteristics__title Парные характеристики
+												ul.characteristics__list
+													li.characteristics__item
+														.characteristics__item-name Стадия строительства
+														.characteristics__item-value Вторичная недвижимость
+													li.characteristics__item
+														.characteristics__item-name Состояние
+														.characteristics__item-value Требуется косметический ремонт
+													li.characteristics__item
+														.characteristics__item-name Кондиционер
+														.characteristics__item-value Нет
+													li.characteristics__item
+														.characteristics__item-name Расположение объекта
+													li.characteristics__item
+														.characteristics__item-name Вид из окон
+														.characteristics__item-value На море
+													li.characteristics__item
+														.characteristics__item-name Отопление
+														.characteristics__item-value Газ
+													li.characteristics__item
+														.characteristics__item-name Мебель
+														.characteristics__item-value нет
+													li.characteristics__item
+														.characteristics__item-name Балкон/терраса
+														.characteristics__item-value нет
+													li.characteristics__item
+														.characteristics__item-name Наличие интернета
+														.characteristics__item-value Нет
+													li.characteristics__item
+														.characteristics__item-name Водоснабжение
+														.characteristics__item-value Колодец
+											.characteristics
+												.characteristics__group
+													h3.section-title.characteristics__title Заголовок 1
+													.characteristics__row
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+												.characteristics__group
+													h3.section-title.characteristics__title Заголовок 2
+													.characteristics__row
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+														ul.characteristics__list
+															li.characteristics__item Характеристика 1
+															li.characteristics__item Характеристика 2
+															li.characteristics__item Характеристика 3
+															li.characteristics__item Характеристика 4
+											.tabs__more
+												a(href="#").underline-link.tabs__more-link Хочу получить больше информации об этом объекте
+										.tabs__bottom
+											ul.tags.tabs__tags
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+									.tabs__content
+										.tabs__top
+											img(src="assets/images/content/driving_directions.png")
+											.tabs__more
+												a(href="#").underline-link.tabs__more-link Хочу получить больше информации об этом объекте
+										.tabs__bottom
+											ul.tags.tabs__tags
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+									.tabs__content
+										.tabs__top
+											.product-description
+												p.
+													Этот просторный и светлый лофт находится на улице Valencia, рядом с площадью Les Glòries.
+												p.
+													Это светлые и уютные апартаменты с паркетным полом из сосны, с освещением LED и бетонными стенами в нескольких частях, которые придают им индустриальный стиль.
+												p.
+													При входе расположена большая гостиная с окнами, выходящими на улицу Valencia, благодаря которым квартира отлично освещена. В апартаментах есть открытая кухня с серым керамическим полом, выполненная в современном дизайне и отделанная материалами высшего качества. Пройдя дальше, мы окажемся в открытой спальной зоне с возможностью создать закрытые пространства путем использования раздвижных дверей от пола до потолка. Первая спальня двухместная, с окнами, выходящими в тихий внутренний двор. Напротив спальни расположен дизайнерский умывальник, отделенный от ванной комнаты с душем. Вторая спальня находится рядом с первой. Это большая комната suite с двумя шкафами, один из которых встроенный и углубляющийся внутрь с особым дизайном, разработанным для удобного расположения одежды и аксессуаров. Эта спальня отлично освещена, так как ее окна также выходят во внутренний двор. Спальня располагает личной ванной комнатой.
+												p.
+													При ремонте апартаментов использовались отделочные материалы высокого качества. Бытовая техника, установленная в квартире, также отличается отличным качеством (siemens, Bosch, Dizzy), также как и мебель на кухне и в ванной.
+												p.
+													В комнате и дневной зоне установлена система кондиционирования воздуха, а также радиаторное отопление.
+												p.
+													Этот прекрасный лофт имеет прекрасное центральное расположение всего в 5 минутах от станции метро Encants и торгового центра Les Glòries и в 10 минутах от знаменитого собора la Sagrada Familia. Рядом находятся станции линий метро L1-L2, множество автобусов, а также сервис велопроката Bicing.
+											.tabs__more
+												a(href="#").underline-link.tabs__more-link Хочу получить больше информации об этом объекте
+										.tabs__bottom
+											ul.tags.tabs__tags
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+									.tabs__content
+										.tabs__top
+											img(src="assets/images/content/driving_directions.png")
+											.tabs__more
+												a(href="#").underline-link.tabs__more-link Хочу получить больше информации об этом объекте
+										.tabs__bottom
+											ul.tags.tabs__tags
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+												li.tags__item
+													a(href="#").tags__link в испанской новостройке
+												li.tags__item
+													a(href="#").tags__link на побережье Испании
+							include ../components/action-links
+							.offer-list.product__similar-offers.d-none.d-md-block
+								.offer-list__header
+									h3.section-title.offer-list__title Похожие предложения
+									a(href="#").underline-link.offer-list__notifications-link Получать уведомления о похожих предложениях
+								.offer-list__body
+									.row
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+							.offer-list.offer-list--similar-offers.product__similar-offers.d-block.d-md-none
+								h3.section-title.offer-list__title Похожие предложения
+								.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											include ../components/offer-block
+										.swiper-slide
+											include ../components/offer-block
+										.swiper-slide
+											include ../components/offer-block
+										.swiper-slide
+											include ../components/offer-block
+										.swiper-slide
+											include ../components/offer-block
+										.swiper-slide
+											include ../components/offer-block
+									.swiper-buttons
+										.swiper-button-prev
+										.swiper-button-next
+							.offer-list.product__you-viewed.d-none.d-md-block
+								.offer-list__header
+									h3.section-title.offer-list__title Вы просматривали
+								.offer-list__body
+									.row
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+										.col-4.offer-list__item
+											include ../components/offer-block-small
+						.col-12.col-lg-3
+							.sidebar.sidebar--product-page
+								.consultation.sidebar__consultation
+									h3.consultation__title Консультация специалиста
+									ul.consultation__phones
+										li.location-and-phone.location-and-phone--russia.location-and-phone--russia-consultation.consultation__phone
+											a(href="tel:+74951087479").location-and-phone__phone +7 495 108 74 79
+										li.location-and-phone.location-and-phone--spain.location-and-phone--spain-consultation.consultation__phone
+											a(href="tel:+34667697007").location-and-phone__phone +34 667 697 007
+									a(href="#").btn-orange.btn-orange--callback.consultation__btn
+										include ../svgico/product-card/phone
+										.
+											Обратный звонок
+								.mortgage-calc.sidebar__mortgage-calc
+									h3.mortgage-calc__title Ипотечный калькулятор
+									form(action="#").mortgage-calc__form
+										.mortgage-calc__form-items
+											.mortgage-calc__form-item-group.mortgage-calc__form-item-group--amount
+												.mortgage-calc__form-item.mortgage-calc__form-item--credit-amount
+													label(for="credit_amount").mortgage-calc__form-label Сумма кредита
+													input(type="text", name="credit_amount", id="credit_amount", placeholder="200.000.000").mortgage-calc__form-text.mortgage-calc__form-text--credit-amount
+												.mortgage-calc__form-item.mortgage-calc__form-item--currency
+													span.mortgage-calc__prev-currency
+														img(src="assets/images/icons/arrow_prev_calc.png", alt="")
+													span.mortgage-calc__currency
+														img(src="assets/images/icons/euro_white.png", alt="")
+													span.mortgage-calc__next-currency
+														img(src="assets/images/icons/arrow_next_calc.png", alt="")
+											.mortgage-calc__form-item.mortgage-calc__form-item--percent
+												label(for="percent").mortgage-calc__form-label Заголовок
+												input(type="text", name="percent", id="percent", placeholder="50").mortgage-calc__form-text.mortgage-calc__form-text--percent
+											.mortgage-calc__form-item
+												label(for="term").mortgage-calc__form-label Срок
+												select(name="term", id="term").mortgage-calc__form-select
+													option(value="20") 20 лет
+													option(value="30") 30 лет
+													option(value="40") 40 лет
+													option(value="50") 50 лет
+											.mortgage-calc__form-item
+												label(for="rate").mortgage-calc__form-label Ставка
+												select(name="rate", id="rate").mortgage-calc__form-select
+													option(value="5.5") 5,5 %
+													option(value="6.5") 6,5 %
+													option(value="7.5") 7,5 %
+													option(value="8.5") 8,5 %
+										.mortgage-calc__form-actions
+											button(type="submit").btn-orange.btn-orange--calc.mortgage-calc__form-btn
+												include ../svgico/product-card/calculator
+												.
+													Рассчитать
+											button(type="submit").btn-orange.btn-orange--application.mortgage-calc__form-btn
+												include ../svgico/product-card/request
+												.
+													Заявка на ипотеку
+										.loan-information.mortgage-calc__loan-information
+											.loan-information__item
+												.loan-information__item-name Сумма кредита:
+												.loan-information__item-value 200.000.000
+											.loan-information__item
+												.loan-information__item-name Общие выплаты:
+												.loan-information__item-value 300.000.000
+											.loan-information__item
+												.loan-information__item-name Удорожание:
+												.loan-information__item-value 20.000
+											.loan-information__item
+												.loan-information__item-name Ежемесячный платеж:
+												.loan-information__item-value 300.000
+								.simple-search.sidebar__search
+									h3.simple-search__title Поиск
+									form(action="#").simple-search__form
+										input(type="text", name="query", placeholder="Ключевые слова").simple-search__form-text
+										button(type="submit").simple-search__form-submit
+								.offer-list-blocks.offer-list-blocks--favorites.sidebar__favorites
+									h3.offer-list-blocks__title Избранное (20)
+									.offer-list-blocks__items
+										.offer-list-block.offer-list-blocks__item
+											.offer-list-block__img
+												a(href="#", title="Квартира в прекрасном районе Раваль в Барселоне")
+													img(src="assets/images/content/offer_list_block_img.png")
+											h4.offer-list-block__title
+												a(href="#") Квартира в прекрасном районе Раваль в Барселоне
+											.offer-list-block__price 1.100.000
+										.offer-list-block.offer-list-blocks__item
+											.offer-list-block__img
+												a(href="#", title="Квартира в прекрасном районе Раваль в Барселоне")
+													img(src="assets/images/content/offer_list_block_img.png")
+											h4.offer-list-block__title
+												a(href="#") Квартира в прекрасном районе Раваль в Барселоне
+											.offer-list-block__price 1.100.000
+										a(href="#").btn-orange.btn-orange--favorites.offer-list-blocks__btn
+											include ../svgico/offer-block/like
+											.
+												Перейти в избранное
+								.filter-block.sidebar__search-by-region
+									h3.filter-block__title Поиск по регионам
+									ul.filter-block__list
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Каталония
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Коста Маресме
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Белалькасар
+												span.filter-block__count (213)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Каталония
+												span.filter-block__count (23)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Коста Маресме
+												span.filter-block__count (23)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Белалькасар
+												span.filter-block__count (2353)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Каталония
+												span.filter-block__count (2333)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Коста Маресме
+												span.filter-block__count (2313)
+								.filter-block.sidebar__select-by-type
+									h3.filter-block__title Выбор по типу
+									ul.filter-block__list
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Квартиры
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Дома
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Таунхаусы
+												span.filter-block__count (213)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Бизнес и коммерческая недвижимость
+												span.filter-block__count (23)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Земельные участки
+												span.filter-block__count (23)
+									a(href="#").btn-orange.btn-orange--new-offers.filter-block__btn
+										include ../svgico/product-card/home
+										.
+											Новых предложений #[span.btn-orange__number 16]
+			include ../components/section-subscribe

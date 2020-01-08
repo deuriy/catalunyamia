@@ -1,0 +1,18 @@
+include ../components/top-line
+header.header
+	.header__top
+		.container.header__top-container
+			include ../components/menu-hamburger
+			a(href="/", title="На главную").header__logo
+				img(src="assets/images/content/logo.png", alt="Логотип")
+			.header__slogan.d-none.d-md-block Продажа недвижимости в Испании по выгодным ценам
+			include ../components/location-and-phone
+			a(data-src="#callback-form").btn-orange.open-popup-link.header__btn-call.d-none.d-sm-block Обратный звонок
+			.header__icons
+				a(href="#").icon.icon--like.header__like
+					include ../svgico/like
+					span.label.icon__count 12
+				include ../components/search-form
+	.header__bottom.d-none.d-md-block
+		.container
+			include ../components/main-menu

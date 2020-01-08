@@ -1,0 +1,119 @@
+.header
+	position: relative
+	+box-shadow(0, 2px, 8px, rgba(0, 0, 0, .16))
+	background: $white
+	
+	+maxw(575px)
+		box-shadow: none
+	
+	&__location
+		z-index: 1
+		flex-shrink: 0
+	
+		&--russia
+			margin-right: 37px
+			
+			+maxw(1199px)
+				margin-right: 12px
+		
+		&--spain
+			margin-right: 33px
+			
+			+maxw(1199px)
+				margin-right: 15px
+	
+	&__top
+		padding-top: 24px
+		padding-bottom: 23px
+		
+		+maxw(991px)
+			padding-top: 16px
+			padding-bottom: 16px
+		
+		+maxw(575px)
+			padding-top: 5px
+			padding-bottom: 3px
+	
+	&__top-container
+		display: flex
+		align-items: center
+		
+		+maxw(991px)
+			justify-content: space-between
+	
+	&__col
+		&--first
+			padding-right: 0
+		
+		&--second
+			padding-right: 19px
+	
+	&__logo
+		flex-shrink: 0
+		margin-right: 22px
+		
+		+maxw(1199px)
+			margin-right: 20px
+		
+		+maxw(991px)
+			margin-right: 0
+		
+		img
+			+maxw(575px)
+				max-width: 100px
+				margin-top: -2px
+				margin-left: 33px
+	
+	&__menu-hamburger
+		margin-left: 4px
+	
+	&__slogan
+		flex-shrink: 0
+		max-width: 225px
+		margin-top: 2px
+		margin-right: 14px
+		color: #1F3764
+		font-weight: 500
+		
+		+maxw(1199px)
+			max-width: 197px
+			margin-right: 9px
+			font-size: 14px
+	
+	.header__btn-call
+		z-index: 1
+		margin-top: -1px
+		
+		+maxw(991px)
+			margin-top: 0
+	
+	&__icons
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 94px
+		margin-left: 30px
+		
+		+maxw(1199px)
+			margin-left: 20px
+		
+		+maxw(991px)
+			width: 84px
+			margin-left: 0
+		
+		+maxw(575px)
+			width: auto
+			margin-top: 1px
+			margin-right: 20px
+	
+	&__like
+		z-index: 1
+	
+	&__search-block
+		position: absolute
+		top: 0
+		right: 0
+		
+		&--open
+			z-index: 2

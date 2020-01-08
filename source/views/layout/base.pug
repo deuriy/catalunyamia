@@ -1,0 +1,30 @@
+include ../config
+block config
+
+doctype html
+html(lang= lang)
+
+	include head
+
+	body.drawer.drawer--left
+		.wrapper
+
+			include header
+
+			block content
+
+			include footer
+			
+		include ../components/drawer-nav
+
+		script(src="assets/js/jquery-3.2.1.min.js")
+		script(src="assets/js/owl.carousel.min.js")
+		script(src="assets/js/modernizr.custom.min.js")
+		script(src="assets/js/multiple-select.min.js")
+		script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+		script(src="assets/js/jquery.ui.touch-punch.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js")
+		script(src="assets/js/swiper.min.js")
+		script(src="assets/js/jquery.fancybox.min.js")
+		script(src="assets/js/main.min.js")

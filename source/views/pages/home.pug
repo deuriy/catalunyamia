@@ -1,0 +1,21 @@
+extends ../layout/base
+
+append config
+	- var title = 'Главная страница';
+
+block content
+	main.main-content.main-content--frontpage
+		section.frontpage
+			include ../components/section-search
+			include ../components/property-types
+			include ../components/top-offers
+			include ../components/section-banner
+			include ../components/work-scheme
+			include ../components/section-banner3
+			include ../components/property-listings
+			include ../components/regions-search
+			include ../components/section-news
+			include ../components/useful-articles
+			include ../components/about-us
+			include ../components/section-banner2
+			include ../components/section-subscribe

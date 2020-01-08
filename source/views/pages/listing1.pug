@@ -1,0 +1,284 @@
+extends ../layout/base
+
+append config
+	- var title = 'Листинг 1';
+
+block content
+	main.main-content.main-content--listing
+		section.listing
+			include ../components/section-search-listing
+			section.about-real-estate.listing__about-real-estate
+				.container
+					.row
+						.col-12
+							.about-real-estate__text.blue-line.blue-line--short
+								p.
+									Сколько стоит недвижимость в Барселоне, дорого это или доступно – это актуальные вопросы для всех, кто собрался поселиться у моря в одном из популярнейших городов в мире. Мягкий климат, отличная экология, отлично развитая пляжная и городская инфраструктура, достопримечательности города и богатейшее культурное наследие - это лишь часть преимуществ, привлекающих в этот город обилие туристов. Жилая недвижимость в Барселоне пользуется высоким спросом, и цены на нее доступными назвать получится с трудом.
+			section.categories.listing__categories
+				.container
+					.row
+						.col-12.col-md-4
+							a(href="#", title="Квартиры", target="_blank").category-block.categories__item
+								.category-block__img
+									img(src="assets/images/content/flats.png", alt="Квартиры")
+								.category-block__label 888 предложений
+								h3.category-block__title Квартиры
+						.col-12.col-md-4
+							a(href="#", title="Дома", target="_blank").category-block.categories__item
+								.category-block__img
+									img(src="assets/images/content/houses.png", alt="Квартиры")
+								.category-block__label 888 предложений
+								h3.category-block__title Дома
+						.col-12.col-md-4
+							a(href="#", title="Коммерческая недвижимость", target="_blank").category-block.categories__item
+								.category-block__img
+									img(src="assets/images/content/commercial_property.png", alt="Квартиры")
+								.category-block__label 888 предложений
+								h3.category-block__title.category-block__title--large Коммерческая недвижимость
+			section.sort-offers.listing__sort-offers
+				.container
+					.row
+						.col-12
+							.sort-offers__inner
+								.sort-offers__left
+									ul.display-types
+										li.display-types__item.display-types__item--tile
+											a(href="#", title="Отобразить в виде плиток").display-types__link
+												include ../svgico/display-types/tile.pug
+										li.display-types__item.display-types__item--listing
+											a(href="#", title="Отобразить в виде списка").display-types__link
+												include ../svgico/display-types/listing.pug
+								.sort-offers__right
+									form.sorting-form.sort-offers__sorting-form
+										.sorting-form__item
+											label(for="sorting_criterion").sorting-form__label Сортировать
+											select(name="sorting_criterion", id="sorting_criterion").sorting-form__select
+												option(value="default") По умолчанию
+												option(value="criterion1") Критерий 1
+												option(value="criterion2") Критерий 2
+												option(value="criterion3") Критерий 3
+									form.quick-search.sort-offers__quick-search
+										input(type="text", name="property_id", id="property_id", placeholder="Быстрый поиск по ID").quick-search__text
+										button(type="button").btn-orange.quick-search__btn Найти
+			section.columns.listing__columns
+				.container
+					.row
+						.col-12.col-lg-9
+							.offers-listing.listing__offers-listing
+								.offer-block.offer-block--twocol.offers-listing__item
+									.offer-block__left
+										.offer-block__photos
+											include ../components/offer-photos-swiper
+											span.offer-block__info.offer-block__info--id ID 7777
+											a(href="#").offer-block__info.offer-block__info--like
+												include ../svgico/offer-block/like
+											span.offer-block__info.offer-block__info--photos-count
+												include ../svgico/offer-block/photo-camera
+												span.offer-block__number 77
+											span.offer-block__info.offer-block__info--label.
+												Цена снижена на 5500 #[img(src="assets/images/icons/icon_euro.png")]
+									.offer-block__right
+										.offer-block__body
+											a(href="/product_card.html", title="Перейти на карточку объекта", target="_blank").offer-block__overlay-link
+											h3.offer-block__title Квартира в прекрасном районе Раваль в Барселоне
+											.offer-block__location-and-price
+												.offer-block__location-wrapper
+													a(href="#").location.underline-link.offer-block__link Барселона
+													span.offer-block__location-separator -
+													a(href="#").underline-link.offer-block__link Раваль
+												.offer-block__price-wrapper
+													span.discount.offer-block__discount +15%
+													span.price.price--type2 1.100.000
+											.offer-block__text
+												p.
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.........
+											.offer-block__characteristics-and-btns
+												.offer-block__characteristics
+													span.room-characteristic.room-characteristic--beds.offer-block__room-characteristic
+														include ../svgico/offer-block/bed
+														span.room-characteristic__number 5
+													span.room-characteristic.room-characteristic--bathrooms.offer-block__room-characteristic
+														include ../svgico/offer-block/bathroom
+														span.room-characteristic__number 3
+													span.room-characteristic.room-characteristic--doors.offer-block__room-characteristic
+														include ../svgico/offer-block/door
+														span.room-characteristic__number 2
+													span.room-characteristic.room-characteristic--square.offer-block__room-characteristic
+														include ../svgico/offer-block/plans
+														span.room-characteristic__number.
+															302м#[sup 2]
+												.offer-block__btns
+													a(href="#ask-question").btn-orange.btn-orange--email.offer-block__btn.open-popup-link Интересует!
+													a(href="/product_card.html", target="_blank").btn-orange.btn-orange--arrow-right.offer-block__btn Подробнее
+								include ../components/offer-block-twocol
+								include ../components/offer-block-twocol
+								include ../components/offer-block-twocol
+								include ../components/offer-block-twocol
+								include ../components/offer-block-twocol
+								include ../components/offer-block-twocol
+								.offers-listing__more
+									a(href="#").underline-link.offers-listing__more-link Показать еще 9 объектов
+								ul.pagination
+									li.pagination__item.pagination__item--prev
+										a(href="#").pagination__link Назад
+									li.pagination__item
+										a(href="#").pagination__link 1
+									li.pagination__item.pagination__item--current
+										a(href="#").pagination__link 2
+									li.pagination__item
+										a(href="#").pagination__link 3
+									li.pagination__item
+										a(href="#").pagination__link 4
+									li.pagination__item
+										a(href="#").pagination__link 5
+									li.pagination__item
+										a(href="#").pagination__link 6
+									li.pagination__item.pagination__item--more
+										a(href="#").pagination__link
+									li.pagination__item
+										a(href="#").pagination__link 16
+									li.pagination__item.pagination__item--next
+										a(href="#").pagination__link Вперед
+						.col-12.col-lg-3
+							.sidebar
+								.filter-block.sidebar__search-by-region
+									h3.filter-block__title Поиск по регионам
+									ul.filter-block__list
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Каталония
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Коста Маресме
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Белалькасар
+												span.filter-block__count (213)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Каталония
+												span.filter-block__count (23)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Коста Маресме
+												span.filter-block__count (23)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Белалькасар
+												span.filter-block__count (2353)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Каталония
+												span.filter-block__count (2333)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Коста Маресме
+												span.filter-block__count (2313)
+								.filter-block.sidebar__select-by-type
+									h3.filter-block__title Выбор по типу
+									ul.filter-block__list
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Квартиры
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Дома
+												span.filter-block__count (233)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Таунхаусы
+												span.filter-block__count (213)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Бизнес и коммерческая недвижимость
+												span.filter-block__count (23)
+										li.filter-block__item
+											a(href="#").filter-block__link
+												span.filter-block__link-title Земельные участки
+												span.filter-block__count (23)
+									a(href="#").btn-orange.btn-orange--new-offers.filter-block__btn
+										include ../svgico/product-card/home
+										.
+											Новых предложений #[span.btn-orange__number 16]
+								.offer-list-blocks.sidebar__you-viewed
+									h3.offer-list-blocks__title Вы просматривали (20)
+									.offer-list-blocks__items
+										.offer-list-block.offer-list-blocks__item
+											.offer-list-block__img
+												a(href="#", title="Квартира в прекрасном районе Раваль в Барселоне")
+													img(src="assets/images/content/offer_list_block_img.png")
+											h4.offer-list-block__title
+												a(href="#") Квартира в прекрасном районе Раваль в Барселоне
+											.offer-list-block__price 1.100.000
+										.offer-list-block.offer-list-blocks__item
+											.offer-list-block__img
+												a(href="#", title="Квартира в прекрасном районе Раваль в Барселоне")
+													img(src="assets/images/content/offer_list_block_img.png")
+											h4.offer-list-block__title
+												a(href="#") Квартира в прекрасном районе Раваль в Барселоне
+											.offer-list-block__price 1.100.000
+										a(href="#").btn-orange.offer-list-blocks__btn Все просмотренные
+								.offer-list-blocks.offer-list-blocks--new-offers.sidebar__new-offers
+									h3.offer-list-blocks__title Новые предложения за неделю (1000)
+									.offer-list-blocks__items
+										.offer-list-block.offer-list-blocks__item
+											.offer-list-block__img
+												a(href="#", title="Квартира в прекрасном районе Раваль в Барселоне")
+													img(src="assets/images/content/offer_list_block_img.png")
+											h4.offer-list-block__title
+												a(href="#") Квартира в прекрасном районе Раваль в Барселоне
+											.offer-list-block__price 1.100.000
+										.offer-list-block.offer-list-blocks__item
+											.offer-list-block__img
+												a(href="#", title="Квартира в прекрасном районе Раваль в Барселоне")
+													img(src="assets/images/content/offer_list_block_img.png")
+											h4.offer-list-block__title
+												a(href="#") Квартира в прекрасном районе Раваль в Барселоне
+											.offer-list-block__price 1.100.000
+										a(href="#").btn-orange.offer-list-blocks__btn Все новые объекты
+			section.property-by-district.listing__property-by-district
+				.container
+					.row
+						.col-12
+							h2.section-title.property-by-district__title Недвижимость в барселоне по районам
+					.row
+						.col-12.col-lg-9.col-xl-10
+							.property-by-district__map
+								img(src="assets/images/content/property_by_district.png", alt="Property by district")
+						.col-12.col-lg-3.col-xl-2
+							ul.districts-list.property-by-district__districts-list
+								li.districts-list__item
+									a(href="#").districts-list__link Сант-Марти (1)
+								li.districts-list__item
+									a(href="#").districts-list__link Сант-Жервази (2)
+								li.districts-list__item
+									a(href="#").districts-list__link Эшампле (0)
+								li.districts-list__item
+									a(href="#").districts-list__link Сантс-Монтжуик (1)
+								li.districts-list__item
+									a(href="#").districts-list__link Сьютат  Вейля (0)
+								li.districts-list__item
+									a(href="#").districts-list__link Лес Кортс (2)
+								li.districts-list__item
+									a(href="#").districts-list__link Орта Гинардо (0)
+								li.districts-list__item
+									a(href="#").districts-list__link Грасия (2)
+								li.districts-list__item
+									a(href="#").districts-list__link Ноу Баррис (1)
+								li.districts-list__item
+									a(href="#").districts-list__link Сант Андреу (2)
+								li.districts-list__item
+									a(href="#").districts-list__link Сант Андриа (0)
+								li.districts-list__item
+									a(href="#").districts-list__link Оспиталет (1)
+			section.about-us.about-us--listing
+				.container
+					.row
+						.col-12
+							h2.section-title.about-us__title Выбирайте жилье своей мечты уже сегодня! с Picolo Europa SL!
+							.blue-line.blue-line--short.about-us__text
+								p.
+									Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit.'

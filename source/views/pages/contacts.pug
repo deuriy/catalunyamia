@@ -1,0 +1,74 @@
+extends ../layout/base
+
+append config
+	- var title = 'Контакты';
+
+block content
+	main.main-content.main-content--contacts
+		section.contacts
+			section.addresses-section
+				.addresses-section__col
+					.address-block.address-block--spain
+						.address-block__inner
+							h3.address-block__title Оффициальное представительство #[br]в Испани, Гирона
+							.address-block__contacts
+								.address-block__contacts-item.
+									#[img(src="assets/images/icons/icon_address_block_location.png", alt="")] Carrer Riu de la Plata, 30, 17310, Lloret de Mar, Girona, Spain
+								.address-block__contacts-item.
+									#[img(src="assets/images/icons/icon_address_block_phone.png", alt="")] Телефон в Испании: +34 667 697 007
+								.address-block__btn-wrapper
+									a(href="#").btn-orange.address-block__btn Связаться с нами
+				.addresses-section__col
+					.address-block.address-block--russia
+						.address-block__inner
+							h3.address-block__title Оффициальное представительство #[br]в России, Москва
+							.address-block__contacts
+								.address-block__contacts-item.
+									#[img(src="assets/images/icons/icon_address_block_location.png", alt="")] Москва, Нахимовский проспект д.32, офис 624
+								.address-block__contacts-item.
+									#[img(src="assets/images/icons/icon_address_block_phone.png", alt="")] Телефон в Москве: +7 495 108 7479
+								.address-block__btn-wrapper
+									a(href="#").btn-orange.address-block__btn Связаться с нами
+		section.agencies-section
+			.container
+				.row
+					.col-12.col-lg-6
+						.agency.agency--spain.agencies-section__agency
+							h3.agency__location Барселона
+							.agency__contacts
+								p.
+									Официальное представительство в Испании: Carrer Riu de la Plata, 30, 17310, Lloret de Mar, Girona, Spain
+								p.
+									Юридический адрес: Narcis Monturiol 216 6º-1ª 08340 Vilassar de Mar (Barcelona) N.I.F. B-62628656
+								p.
+									Тел. в Испании:  +34 667 697 007
+					.col-12.col-lg-6
+						.agency.agency--russia.agencies-section__agency
+							h3.agency__location Москва
+							.agency__contacts
+								p.
+									Официальное представительство в России: Москва, Нахимовский проспект, д. 32, офис 624
+								p.
+									Тел. в Москве:  +7 495 108 74 79
+		section.application-section
+			.container
+				.row
+					.col-12
+						form.contact-form.contact-form--block.application-section__contact-form
+							.contact-form__inner
+								h2.contact-form__title Заявка на подбор недвижимости
+								.contact-form__fieldset
+									.form-item.contact-form__item
+										label.form-label.contact-form__label(for="name") Ваше имя
+										input(type="text", name="name", id="name", placeholder="Введите имя").form-text.contact-form__text
+									.form-item.contact-form__item
+										label.form-label.contact-form__label(for="email") Ваш Email
+										input(type="email", name="email", id="email", placeholder="Введите Email").form-text.contact-form__text
+									.form-item.contact-form__item
+										label.form-label.contact-form__label(for="phone") Ваш телефон
+										input(type="text", name="phone", id="phone", placeholder="Введите номер телефона").form-text.contact-form__text
+									.form-item.contact-form__item
+										label.form-label.contact-form__label(for="comment") Комментарий
+										textarea(name="comment", id="comment", placeholder="Меня интересует недвижимость номер 117. Свяжитесь, пожалуйста, со мной.").form-textarea.contact-form__textarea
+								.contact-form__actions
+									button(type="submit").btn-orange.contact-form__submit Оставить заявку
